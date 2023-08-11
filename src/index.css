@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap");
+
+:root {
+  /* (Dark Mode Elements) */
+
+  --dark-blue: hsl(209, 23%, 22%);
+
+  /* (Dark Mode Background) */
+
+  --very-dark-blue-dmb: hsl(207, 26%, 17%);
+
+  /* (Light Mode Text) */
+  --very-dark-blue-lmt: hsl(200, 15%, 8%);
+
+  /* (Light Mode Input) */
+  --dark-gray: #858585;
+
+  /* (Light Mode Background) */
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  /* (Dark Mode Text & Light Mode Elements) */
+  --white: hsl(0, 0%, 100%);
+}
+body.darkTheme {
+  background-color: var(--very-dark-blue-dmb);
+  /* color: var(--white); */
+}
+body.darkTheme header,
+body.darkTheme form {
+  background-color: var(--dark-blue);
+  box-shadow: 0px 2px 2px var(--very-dark-blue-dmb);
+  color: var(--very-light-gray);
+}
+body.darkTheme form input,
+body.darkTheme form input::placeholder {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 2000px;
+  margin: auto;
+  transition: 0.4s;
+  background-color: var(--very-light-gray);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  margin: auto;
+}
+
+ul li {
+  list-style: none;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 3rem;
+  padding: 2rem 4rem;
+
+
+}
+
