@@ -10,8 +10,8 @@ const options = [
   "Oceania",
 ];
 
-const Filter = () => {
-  const [selected, setSelected] = useState("Filter by Region");
+const Filter = ({region,setRegion}) => {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   // const handleChange = (e) => {
@@ -21,7 +21,7 @@ const Filter = () => {
   return (
     <div className={styles.container}>
       <div className={styles.select} onClick={() => setIsOpen((open) => !open)}>
-        {selected}{" "}
+        {region}{" "}
         <span>
           <img src="chevron-down-outline.svg" alt="" />
         </span>
@@ -34,7 +34,7 @@ const Filter = () => {
               key={i}
               onClick={() => {
                 setIsOpen(false);
-                setSelected(option);
+                setRegion(option);
               }}
             >
               {option}
