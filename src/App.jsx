@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 import Details from "./pages/Details/Details";
@@ -14,7 +14,7 @@ function App() {
     const getCountries = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(`https://restcountries.com/v3.1/all`);
+        const response = await fetch(`https://restcountries.com/v3.1/all?fields=name,capital,flags,population,cca2,region`);
 
         const data = await response.json();
         // console.log(data)
@@ -35,7 +35,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-        index
+        
           path="/"
           element={
             <Home
@@ -52,9 +52,10 @@ function App() {
         />
 
         <Route
-          path="details"
-          element={<Details selectedCountry={selectedCountry} />}
+          path="/:name"
+          element={<Details />}
         />
+          <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

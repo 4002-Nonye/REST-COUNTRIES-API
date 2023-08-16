@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./CardItem.module.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const CardItem = ({ country, setSelectedCountry }) => {
+const CardItem = ({ country }) => {
   return (
     <>
-      <li className={styles.div} onClick={() => setSelectedCountry(country)}>
-        <Link to={`details`} className={styles.link}>
+      <li className={styles.div}>
+        <Link
+          to={`${country.cca2}`}
+          className={styles.link}
+        >
           <div className={styles.imgHolder}>
             <img src={country.flags.svg} alt={country.flags.alt} />
           </div>

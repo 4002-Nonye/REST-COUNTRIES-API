@@ -3,6 +3,7 @@ import styles from "./Card.module.css";
 import CardItem from "../CardItem/CardItem";
 import Spinner from "../Spinner/Spinner";
 import Error from "../Error/Error";
+import { Link } from "react-router-dom";
 
 const Card = ({ countries, isLoading, region, query, setSelectedCountry }) => {
   const [showError, setShowError] = useState(true);
@@ -34,12 +35,16 @@ const Card = ({ countries, isLoading, region, query, setSelectedCountry }) => {
           <>
             <ul className={styles.card}>
               {filterByName.map((country, index) => (
-                <CardItem
-                  country={country}
-                  key={index}
-                  isLoading={isLoading}
-                  setSelectedCountry={setSelectedCountry}
-                />
+              
+                   <CardItem
+                    country={country}
+                    key={index}
+                    isLoading={isLoading}
+                    setSelectedCountry={setSelectedCountry}
+                  />
+           
+                  
+             
               ))}
             </ul>
           </>
