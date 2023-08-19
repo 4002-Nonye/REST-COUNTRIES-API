@@ -9,12 +9,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [region, setRegion] = useState("Filter by Region");
   const [query, setQuery] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState("");
   useEffect(() => {
     const getCountries = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(`https://restcountries.com/v3.1/all?fields=name,capital,flags,population,cca2,region`);
+        const response = await fetch(
+          `https://restcountries.com/v3.1/all?fields=name,capital,flags,population,cca2,region`
+        );
 
         const data = await response.json();
         // console.log(data)
@@ -32,12 +33,9 @@ function App() {
   }, []);
 
   return (
-
-   
     <BrowserRouter>
       <Routes>
         <Route
-        
           path="/"
           element={
             <Home
@@ -48,19 +46,15 @@ function App() {
               setRegion={setRegion}
               query={query}
               setQuery={setQuery}
-              setSelectedCountry={setSelectedCountry}
+            
             />
           }
         />
 
-        <Route
-          path="/:name"
-          element={<Details />}
-        />
-          <Route path="*" element={<PageNotFound />} />
+        <Route path="/:name" element={<Details />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
-   
   );
 }
 

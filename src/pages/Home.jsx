@@ -3,7 +3,7 @@ import Header from "../components/Header/Header";
 import Form from "../components/Form/Form";
 import Card from "../components/Card/Card";
 
-const Home = ({ countries, isLoading, query, setQuery, region, setRegion,setSelectedCountry }) => {
+const Home = ({ countries, isLoading, query, setQuery, region, setRegion }) => {
   return (
     <>
       <Header />
@@ -17,8 +17,7 @@ const Home = ({ countries, isLoading, query, setQuery, region, setRegion,setSele
         countries={countries}
         isLoading={isLoading}
         region={region}
-        setSelectedCountry={setSelectedCountry}
-        query={query}
+              query={query}
       
       />
     </>

@@ -5,7 +5,7 @@ import Spinner from "../Spinner/Spinner";
 import Error from "../Error/Error";
 import { Link } from "react-router-dom";
 
-const Card = ({ countries, isLoading, region, query, setSelectedCountry }) => {
+const Card = ({ countries, isLoading, region, query}) => {
   const [showError, setShowError] = useState(true);
   // HANDLE FILTER
   const filterByRegion = countries.filter((country) => {
@@ -40,7 +40,7 @@ const Card = ({ countries, isLoading, region, query, setSelectedCountry }) => {
                     country={country}
                     key={index}
                     isLoading={isLoading}
-                    setSelectedCountry={setSelectedCountry}
+                
                   />
            
                   
