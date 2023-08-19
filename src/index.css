@@ -49,7 +49,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   max-width: 2000px;
   margin: auto;
-  transition: 0.4s;
+  /* transition: 0.4s; */
   background-color: var(--very-light-gray);
   box-sizing: border-box;
   position: relative;
