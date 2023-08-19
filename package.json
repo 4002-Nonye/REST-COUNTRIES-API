@@ -1,5 +1,6 @@
 {
   "name": "rest-countries-api",
+  "homepage":"https://rest-countries-api-alpha-rose.vercel.app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -32,6 +32,8 @@ function App() {
   }, []);
 
   return (
+
+   
     <BrowserRouter>
       <Routes>
         <Route
@@ -58,6 +60,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
+   
   );
 }
 

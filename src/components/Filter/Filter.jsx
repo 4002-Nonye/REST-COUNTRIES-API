@@ -19,7 +19,7 @@ const Filter = ({region,setRegion}) => {
   // };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.select} onClick={() => setIsOpen((open) => !open)}>
         {region}{" "}
         <span>
@@ -42,7 +42,7 @@ const Filter = ({region,setRegion}) => {
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 };
 

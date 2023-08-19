@@ -7,7 +7,8 @@
 }
 
 .btn {
-    background-color: var(--white);
+    background-color: inherit;
+    color: inherit;
   display: flex;
   padding: 0.5rem 1rem;
   width: 6rem;

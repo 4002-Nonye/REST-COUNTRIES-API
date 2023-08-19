@@ -21,20 +21,22 @@
   /* (Dark Mode Text & Light Mode Elements) */
   --white: hsl(0, 0%, 100%);
 }
+
+
+
+
 body.darkTheme {
-  background-color: var(--very-dark-blue-dmb);
-  /* color: var(--white); */
+  background-color:var(--very-dark-blue-dmb);
+  color: var(--white);
 }
-body.darkTheme header,
-body.darkTheme form {
+.darkTheme header 
+ {
   background-color: var(--dark-blue);
   box-shadow: 0px 2px 2px var(--very-dark-blue-dmb);
   color: var(--very-light-gray);
 }
-body.darkTheme form input,
-body.darkTheme form input::placeholder {
-  background-color: var(--dark-blue);
-  color: var(--white);
+body.darkTheme ul{
+  background-color:var(--very-dark-blue-dmb);
 }
 
 * {
@@ -49,6 +51,8 @@ body {
   margin: auto;
   transition: 0.4s;
   background-color: var(--very-light-gray);
+  box-sizing: border-box;
+  position: relative;
 }
 
 .app {

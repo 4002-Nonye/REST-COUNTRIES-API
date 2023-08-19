@@ -3,16 +3,7 @@ import styles from "./Header.module.css";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Header = () => {
-  // const [isDark, setIsDark] = useState(false);
-
-  // const handleThemeChange = () => {
-  //   setIsDark((dark)=>!dark);
-
-  // };
-
-  // useEffect(()=>{
-  //   document.body.classList.toggle("darkTheme");
-  // },[isDark])
+ 
   return (
     <header className={styles.header}>
       <div className={styles.headerDiv}>

@@ -13,7 +13,7 @@
   width: 100%;
 }
 .form {
-  background-color: var(--white);
+  /* background-color: var(--white); */
   display: flex;
   align-items: center;
   padding: 1.5rem 2rem;
@@ -29,6 +29,7 @@
   padding-left: 0.6rem;
   font-size: 16px;
   color: var(--dark-gray);
+  background-color: inherit;
 }
 
 @media screen and (max-width: 1000px) {

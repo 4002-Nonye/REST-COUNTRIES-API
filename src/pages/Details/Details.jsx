@@ -40,7 +40,7 @@ const Details = ({ selectedCountry }) => {
     <>
       <Header />
       <div className={styles.wrapper}>
-        <Button className={styles.btn} onClick={() => navigate(-1)}>
+        <Button className={styles.btn} onClick={() => navigate('..')}>
           <span>
             {" "}
             <img src="arrow-back-outline.svg" alt="back-btn" />{" "}
